@@ -1,0 +1,27 @@
+entity User {
+  name String,
+  age Integer,
+  address String,
+  email String
+}
+
+entity Bill {
+  name String,
+  amount Float
+}
+
+relationship OneToMany {
+  User to Bill{user}
+}
+
+paginate User with infinite-scroll
+paginate Bill with pagination
+
+dto * with mapstruct
+
+service User with serviceImpl
+service Bill with serviceClass
+
+
+
+    
